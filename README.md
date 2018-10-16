@@ -11,6 +11,19 @@ use db-migrate
 
 create migrate-file  
 ```> npx db-migrate create file-name --sql-file```
+
+migrate init  
+```> npm run migrate/init```
+
+migrate up  
+```> npm run migrate/up```
+
+migrate down  
+```> npm run migrate/down```
+
+migrate reset  
+```> npm run migrate/reset```
+
 #
 ### webpack
 build  
