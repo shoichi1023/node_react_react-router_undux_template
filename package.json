@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "start": "npx nodemon server.js",
-    "migrate/init": "psql -Uroot -c\"create database wscsv;\"",
+    "migrate/init": "psql -Uroot -c\"create database test;\"",
     "migrate/up": "npx sequelize db:migrate",
     "migrate/undo": "npx sequelize db:migrate:undo",
     "migrate/down": "npx sequelize db:migrate:undo:all",
-    "migrate/clean": "psql -Uroot -c\"drop database wscsv;\"",
+    "migrate/clean": "psql -Uroot -c\"drop database test;\"",
     "watch": "npx webpack -w",
     "build": "npx webpack"
   },
