@@ -9,6 +9,8 @@ require('dotenv').config();
 var app = require('./app');
 var debug = require('debug')('test:server');
 var http = require('http');
+var io = require('socket.io');
+
 /**
  * Get port from environment and store in Express.
  */
@@ -29,6 +31,8 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+
+io.listen(server);
 
 /**
  * Normalize a port into a number, string, or false.
@@ -89,3 +93,5 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
+module.exports = io;
