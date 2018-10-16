@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "example",
+    "database": "wscsv",
     "host": "localhost",
     "dialect": "postgres"
   }
