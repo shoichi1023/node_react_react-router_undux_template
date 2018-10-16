@@ -2,6 +2,7 @@
 
 ### init
  
+ - please edit database-name in npm script
  - please edit db-migrate-driver in package.json
  - please npm install
  - please edit database.json
