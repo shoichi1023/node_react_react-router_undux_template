@@ -1,18 +1,18 @@
 import chai from 'chai';
 import chaiHttp from 'chai-http';
-
 import app from '../app';
 
-chai.should();
+var expect = chai.expect;
 chai.use(chaiHttp);
 
 /* Test the /GET route */
 describe('app index route', () => {
+
   it('it should GET /', (done) => {
     chai.request(app)
       .get('/')
       .end((err, res) => {
-        res.should.have.status(200);
+        expect(res.status).to.equal(200);
         done();
       });
   });
@@ -21,8 +21,9 @@ describe('app index route', () => {
     chai.request(app)
       .get('/notExist')
       .end((err, res) => {
-        res.should.have.status(404);
+        expect(res.status).to.equal(404);
         done();
       });
   });
+
 });
